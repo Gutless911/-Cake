@@ -1,0 +1,277 @@
+/* pages/shopping/shopping.wxss */
+page{
+  background-color: #f7f8fa;
+}
+page , .Shopping{
+  width: 100%;
+  height: 100%;
+}
+.empty{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  padding-top: 400rpx;
+}
+.empty image{
+  width: 300rpx;
+  height: 300rpx;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  position: absolute;
+  left:50%; 
+  top: 5%; 
+  margin-left: -150rpx;
+}
+.empty_text{
+  width: 100%;
+  text-align: center;
+}
+/* .empty_text:nth-child(1){
+  color: #323233;
+  font-size: 14px;
+} */
+.empty_text1{
+  color: #323233;
+  font-size: 28rpx;
+  margin-bottom: 16rpx;
+  margin-top: 48rpx;
+  font-weight: 400;
+}
+.empty_text2{
+  font-size: 28rpx;
+  color: #969799;  
+}
+.empty button{
+  width: 148rpx !important;
+  height: 64rpx;
+  color: #c3a769 !important;
+  line-height: 64rpx;
+  border: 1px solid #f44;
+  font-size: 28rpx;
+  padding: 0;
+  border-radius: 22rpx;
+  font-weight: 400;
+  margin-top: 22rpx;
+  background-color: #fff;
+}
+
+/* 实体购物车列表 */
+.something{
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.head{
+  width: 100%;
+  display: flex;
+  background-color: #fff;
+  padding: 10rpx 0;
+  position: fixed;
+  top: 0;
+  z-index: 9;
+}
+.head-left{
+  width: 80%;
+  display: flex;
+  align-items: center;
+  font-size: 28rpx;
+}
+.head-left image{
+  width: 46rpx;
+  height: 48rpx;
+  margin:0 20rpx;
+}
+.head-right{
+  width: 20%;
+  text-align: center;
+  color: #323233;
+  font-size: 14px;
+  line-height: 48rpx;
+}
+.content{
+  margin-top: 88rpx;
+  margin-bottom: 100rpx;
+}
+.content-li{
+  display: flex;
+  width:100%;
+  box-sizing: border-box;
+  padding: 0 40rpx;
+  margin: 20rpx 0;
+}
+.content-li-left{
+  width: 10%;
+  display: flex;
+  background-color: #fff;
+  justify-content: center;
+  align-items: center;
+  padding: 20rpx 0;
+}
+.content-li-left view{
+  display: flex;
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 100%;
+  border: 1px solid #c8c9cc;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+.content-li-right{
+  padding: 20rpx 0;
+  width: 90%;
+  display: flex;
+  background-color: #fff;
+}
+.active{
+  color: #c3a769 !important;
+  border-color:#c3a769 !important;
+  font-size: 58rpx;
+}
+.li-right-img{
+  display: flex;
+  width: 30%;
+  height: 192rpx;
+  background-color:#f8f8f8;
+  align-items: center;
+  border-radius: 20rpx;
+}
+.li-right-img image{
+    width: 100%;
+    height: 100%;
+    border-radius: 20rpx;
+}
+.li-right-data{
+  display: flex;
+  width: 70%;
+  flex-direction: column;
+  position: relative;
+  margin-left: 10rpx;
+}
+.data-name{
+  width: 100%;
+  color: #323233;
+  font-size: 28rpx;
+}
+.data-content{
+  width: 100%;
+  display: flex;
+  position: absolute;
+  bottom: 10rpx;
+}
+.data-price{
+  width: 30%;
+  font-size: 32rpx;
+  font-weight: 600;
+  color: #c3a769 !important;
+}
+.data-jia{
+  display: flex;
+  width: 70%;
+  justify-content: flex-end;
+  margin-right: 20rpx;
+}
+.data-jia .iconfont{
+  display: flex;
+  width: 50rpx;
+  height: auto;
+  background-color: #f2f3f5;
+  margin:  0 5rpx;
+  justify-content: center;
+  align-items: center;
+  color: #323233;
+}
+.sl{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60rpx;
+  height: auto;
+  background-color: #f2f3f5;
+  margin:  0 5rpx;
+  color: #323233;
+  font-size: 28rpx;
+}
+/* 尾部结算 */
+.tail{
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  background-color: #fff;
+}
+.tail-left {
+  display: flex;
+  width: 30%;
+  align-items: center;
+  padding-left: 53rpx;
+}
+.tail-left text{
+  margin-left: 10rpx;
+}
+.tail-left view{
+  display: flex;
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 100%;
+  border: 1px solid #c8c9cc;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+
+}
+.tail-right {
+  display: flex;
+  width: 70%;
+}
+.heji{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 65%;
+  padding-right: 10rpx;
+}
+.butt{
+  width: 35%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.price-label{    
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 50rpx;
+  font-size: 28rpx;
+  color: #323233;
+  justify-content:flex-end ;
+}
+.price-label text{
+  font-size: 32rpx;
+  font-weight: 600;
+  color: #c3a769;
+}
+.desc{
+  display: flex;
+  width: 100%;
+  height: 50rpx;
+  font-size: 20rpx;
+  color: #999;
+  align-items: center;
+  justify-content:flex-end ;
+}
+.butt view{
+  width: 90%;
+  height: 70rpx;
+  border-radius: 18px;
+  border: none;
+  background-color: #c8c9cc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+.ButtActive{
+  background-color: #c3a769 !important;
+}

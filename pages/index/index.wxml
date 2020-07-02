@@ -1,0 +1,54 @@
+<view>
+  <!--轮播图-->
+     <swiper  class="Rotation" indicator-dots='true' autoplay='true' interval='5000'  duration='1000' circular='true'>
+       <block wx:for="{{movies}}"  wx:key = "index">
+         <swiper-item>
+           <image class="Rotation_img" src='{{item.url}}' mode="scaleToFill"></image>
+         </swiper-item>
+       </block>
+     </swiper>
+</view>
+  <!-- 搜索框 -->
+<view class="search">
+  <view class="search_itme">
+    <image class="search_img" src="../../images/search.png"></image>奶油蛋糕
+  </view>
+</view>
+<!-- 小栏目 -->
+<view class="content">
+  <view class="column">
+    <view class="column_itme" wx:for="{{column}}"  wx:key = "index"> 
+      <image class="column_img" src="{{item.url}}"></image><text class="column_text">{{item.text}}</text>
+    </view>
+  </view>
+</view>
+  <view class="title">
+    <view class="title_itme" wx:for="{{Imported}}"  wx:key = "index">
+      <image class="title_itme_img" src="{{item.url}}"></image><text class="title_itme_text">{{item.text}}</text>
+    </view>
+  </view>
+  <view class="ProductContent">
+    <view class="ProductContent_itme">
+      <view class="ProductContent_itmme_i">
+          <view class="_itmeimg1">
+            <text>爆款新品</text><image src="../../images/jt.png"></image>
+          </view>
+      </view>      
+      <view class="ProductContent_itmme_i">
+        <view class="_itmeimg1">
+          <image src="../../images/jt.png"></image><text>现烤面包</text>
+        </view>  
+      </view>      
+      <view class="ProductContent_itmme_i">
+        <view class="_itmeimg1">
+          <image src="../../images/jt.png"></image><text>品尝好味道</text>
+        </view>     
+      </view>   
+      <view class="ProductContent_itmme_i">
+        <view class="_itmeimg1">
+          <text>人气榜单</text><image src="../../images/jt.png"></image>
+        </view> 
+      </view>
+    </view>
+  
+  </view> 

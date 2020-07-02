@@ -1,0 +1,49 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/ation/ation",
+    "pages/details/details",
+    "pages/shopping/shopping",
+    "pages/personal/personal"
+  ],
+  "tabBar": {
+    "color": "#aaaaaa",
+    "selectedColor": "#FF4444",
+    "borderStyle": "white",
+    "backgroundColor": "#FCFCFC", 
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/home1.png",
+        "selectedIconPath": "images/home.png"
+      },
+      {
+        "pagePath": "pages/ation/ation",
+        "text": "全部商品",
+        "iconPath": "images/label1.png",
+        "selectedIconPath": "images/label.png"
+      },
+      {
+        "pagePath": "pages/shopping/shopping",
+        "text": "购物车",
+        "iconPath": "images/Shopping1.png",
+        "selectedIconPath": "images/Shopping.png"
+      },
+      {
+        "pagePath": "pages/personal/personal",
+        "text": "我的",
+        "iconPath": "images/my1.png",
+        "selectedIconPath": "images/my.png"
+      }
+    ]
+  },
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "July Cake蛋糕",
+    "navigationBarTextStyle":"black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

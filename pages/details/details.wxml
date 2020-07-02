@@ -1,0 +1,38 @@
+<!-- pages/details/details.wxml -->
+<!-- 轮播 -->
+<view>
+    <swiper class="Rotation" indicator-dots='true' autoplay='true' interval='5000' duration='1000' circular='true'>
+        <block>
+            <swiper-item>
+                <image class="Rotation_img" src='{{details.src}}' mode="scaleToFill"></image>
+            </swiper-item>
+        </block>
+    </swiper>
+</view>
+
+<!-- 信息 -->
+<view class="content_title" >
+    <view class="title_name">
+        <text>{{details.name}}</text>
+        <view>
+        <view class="iconfont icon-share"></view>
+        分享</view>
+    </view>
+    <view class="title_Price">¥{{details.Price}}</view>
+    <view class="title_Tips">运费¥12.00~32.00</view>
+</view>
+<!-- 选择样式 -->
+<view class="">
+    <view>已选:</view>
+    <view></view>
+</view>
+
+<view class="fom">
+    <view>
+    <view class="iconfont icon-shouye"><text>首页</text></view>
+    <view class="iconfont icon-dkw_xiaoxi"><text>客服</text></view>
+    <view class="iconfont icon-buoumaotubiao40"><text>购物车</text></view>
+    </view>
+    <view class="Addin">加入购物车</view>
+    <view class="Shopping">立即购买</view>
+</view>

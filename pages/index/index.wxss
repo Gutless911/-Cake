@@ -1,0 +1,146 @@
+/* 轮播 */
+.Rotation{
+  width:100vw ;
+  height:480rpx ;
+}
+.Rotation_img{
+  width: 100%;
+  height: 100%;
+}
+/* 搜索栏 */
+.search{
+  display: flex;
+  width: 100%;
+  height: 80rpx;
+  background-color: #F9F9F9;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 分栏 */
+.search_itme{
+  width: 98%;
+  height: 50rpx;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  color: #9E9FA1;
+  font-size: 20rpx;
+}
+.search_img{
+  height: 30rpx;
+  width: 30rpx;
+  margin-left: 20rpx;
+}
+.content{
+  display: flex;
+  width: 100%;
+  height: auto;
+}
+.column{
+  display: flex;
+  width: 100%;
+  height: auto;
+  padding: 20rpx;
+  flex-wrap: wrap;
+}
+.column_itme{
+  display: flex;
+  width: 25%;
+  height: auto;
+  flex-direction: column;
+  align-items: center;
+
+}
+.column_img{
+  width: 100rpx;
+  height: 100rpx;
+  margin-top: 16rpx;
+  margin-bottom: 4rpx;
+}
+.column_text{
+  font-size: 20rpx;
+  color: #6D6D6D;
+}
+
+/* 标题 */
+.title{
+  display: flex;
+  width: 100%;
+  height: auto;
+}
+.title_itme{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* width: 29%; */
+  flex: 1 1 auto;
+}
+.title_itme_img{
+  display: flex;
+  width: 30rpx;
+  height: 30rpx;
+}
+.title_itme_text{
+  display: flex;
+  font-size: 24rpx;
+  color: #EC9292;
+}
+
+/* 尾部 */
+.ProductContent{
+  display: flex;
+  width: 100%;
+}
+.ProductContent_itme{
+  display: flex;
+  width: 100%;
+  height: auto;
+  flex-wrap: wrap;
+}
+.ProductContent .ProductContent_itme view image{
+  width: 30rpx;
+  height: 30rpx;
+}
+.ProductContent_itmme_i{
+  display: flex;
+  width: 50%;
+  height: 198rpx;
+  padding: 15rpx 7.5rpx 15rpx 7.5rpx;
+  box-sizing: border-box;
+  background-size: 94%;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+  /* align-items: center; */
+  justify-content: center;
+}
+.ProductContent_itmme_i:nth-child(1){
+  background-image: url(https://ae01.alicdn.com/kf/H1faeb157ebab49bf82f53c74e8aaa9e5E.jpg);
+  margin-top: 60rpx;
+}
+.ProductContent_itmme_i:nth-child(2){
+  background-image: url(https://ae01.alicdn.com/kf/Hda19ad8d77134329aacada050f23dc46w.jpg) ;
+  margin-top: 30rpx;
+}
+.ProductContent_itmme_i:nth-child(3){
+  background-image: url(https://ae01.alicdn.com/kf/H5aaa27a587c84eb3a81df481cfa952fen.jpg);
+  margin-top: 30rpx;
+}
+.ProductContent_itmme_i:nth-child(4){
+  background-image: url(https://ae01.alicdn.com/kf/Hbd9ba8e1b58f4c4fa1f970401b12a297Z.jpg);
+}
+._itmeimg1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 97%;
+  height: 50rpx;
+  background-color: rgba(130, 109, 92, 0.419);
+  margin-top: 40rpx;
+}
+._itmeimg1 text{
+  color: #fff;
+  font-size: 25rpx;
+  margin-right: 10rpx;
+}

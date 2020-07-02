@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "popup": "/component/popup/popup"
+  },
+  "navigationBarTitleText": "全部商品"
+  
+}

@@ -1,0 +1,70 @@
+<!--pages/shopping/shopping.wxml-->
+<!-- 购物车 -->
+<view class="Shopping">
+	<view wx:if="{{!carts.length}}" class="empty">
+		<image src="../../images/gwc.png"></image>
+		<view class="empty_text empty_text1"><text>购物车还是空的</text></view>
+		<view class="empty_text empty_text2"><text>赶紧买点宝贝慰劳下自己吧</text></view>
+		<button bindtap="gotoindex">去逛逛</button>
+	</view>
+	<view class="something" wx:else>
+		<!-- 标题 -->
+		<view class="head">
+			<view class="head-left">
+				<image src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAgCAYAAAABtRhCAAABrElEQVR4AeySgUYEQQCGhwoBQgpBLhGC29nbvdzlQo9wPUAPEC6I6jUOBD1DlR4goBC4RyghSNFdnfo/zWqcOcFuRTuMu/3/f/5vdmbNr44osmfVavSe56Tzh4HRqfmfQ6++qyO4z/tI6aR7FLYqY0igoDmE4QP33AV3Czi5Lt0wfPHicyfxVt5AOumGYRitVmtSwhNikiRzeQPppBsGLO0gSZ3QMwUNumHAMtba/cD9FXKPsKBfB+6vkHuEBf2ZhziO58fsbqpery81m83ZcYV4ZMiGfLphwFKhfeChVqstBrIc+aYLn4wD4pEhG/Lpxoel17XnrvAgXGaPXfhRX9zCqI+GR4ZsqINufFi87rqCbxL62uF2Fmq32xMKHhL8mvZKWsUrqqD5GdawNsvQSTcMWNnCjrfgVualO2q0F2k72ccl/VW/N0z+o+GRIZsdneu483o7xh+IgdlTMMHXRzGtgiM9D7ySARoeGbKsCXXhB4Fpmq5o4YYuetkERqPRmNHRrDH5H8qwlg66vgWanEcJLIEl8G8D+x+jYTPxJ7Z6r5VGlv4Emc0wUAAAYXHhJmnGZd4AAAAASUVORK5CYII="></image>
+				<text>July's Cake</text>
+			</view>
+			<view hidden="{{Complete}}" class="head-right" bindtap="edit">
+				编辑
+			</view>
+			<view hidden="{{!Complete}}" class="head-right" bindtap="edit">
+				完成
+			</view>
+		</view>
+		<!-- 购物车内容 -->
+		<view class="content">
+			<view class="content-li" wx:for="{{carts}}" wx:key="index">
+				<view class="content-li-left">
+					<view wx:if="{{!Complete}}" class="iconfont icon-checked {{item.isSelect == true ? 'active':''}}" bindtap="switchSelect" data-index="{{index}}"></view>
+					<view wx:elif="{{Complete}}" class="iconfont icon-checked {{item.isComplete == true ? 'active':''}}" bindtap="AllComplete" data-index="{{index}}"></view>
+				</view>
+				<view class="content-li-right">
+					<view class="li-right-img">
+						<image src="{{item.src}}"></image>
+					</view>
+					<view class="li-right-data">
+						<view class="data-name">{{item.name}}</view>
+						<view class="data-content">
+							<view class="data-price">¥{{item.Price}}</view>
+							<view class="data-jia">
+								<view class="iconfont icon-jian" bindtap="delCount" data-index="{{index}}"></view>
+								<view class="sl">{{item.count}}</view>
+								<view class="iconfont icon-jia" bindtap="addCount" data-index="{{index}}"></view>
+							</view>
+						</view>
+					</view>
+				</view>
+			</view>
+		</view>
+		<!-- 结算 -->
+		<view class="tail">
+			<view class="tail-left">
+				<view wx:if="{{!Complete}}" class="iconfont icon-checked {{isAllSelect == true ? 'active':''}}" bindtap="allSelect"></view>
+				<view wx:elif="{{Complete}}" class="iconfont icon-checked {{isAllComplete == true ? 'active':''}}" bindtap="AComplete"></view>
+				<text>全选</text>
+			</view>
+			<view class="tail-right">
+				<view class="heji">
+					<view hidden="{{Complete}}" class="price-label">合计:<text>¥{{ totalMoney}}.00</text></view>
+					<view hidden="{{Complete}}" class="desc">不含运费</view>
+				</view>
+				<view hidden="{{Complete}}" class="butt">
+					<view class="{{Discoloration > 0 ? 'ButtActive':''}}">结算</view>
+				</view>
+				<view hidden="{{!Complete}}" class="butt">
+					<view class="{{Discoloration > 0 ? 'ButtActive':''}}" bindtap="del">删除</view>
+				</view>
+			</view>
+		</view>
+	</view>
+</view>

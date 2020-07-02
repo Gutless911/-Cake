@@ -1,0 +1,26 @@
+<view class="catebox-left">
+  <view wx:for="{{title}}" wx:key="index" id="NAV{{index}}" class="{{index == selectFloorIndex ? 'active':''}}"  bindtap="getStatus" data-index="{{index}}">  
+    <text >{{item.text}}</text>
+  </view>
+</view>
+<!-- 左边标题 -->
+<!-- 右边详情商品 -->
+<scroll-view class="catebox-right" scroll-y style="height: 100%; width: 80%;" bindscroll="scrollTopFun" scroll-into-view="NAV{{status}}" scroll-with-animation="true">
+<view class="catebox-item" wx:for="{{titlename}}" wx:key="index">
+      <view id="NAV{{index}}" class="tui-list-head" animation="{{ani}}">
+      <text>{{item.text}}</text>
+        <view wx:if = "{{item.detailed.length == 0}}" class="Tips">此类下暂时没有商品</view>  <!--提示-->
+        <view class="tui-list-li"  wx:for="{{item.detailed}}" wx:key="index" data-id="{{item.id}}"  bindtap="details">
+          <image src="{{item.src}}"></image>
+            <view class="tui-f">
+              <text class="tuitext">{{item.name}}</text>
+              <view class="tui-t">
+                <text>¥{{item.Price}}</text>
+                <image src="../../images/jr.png" data-goodid="{{item.id}}" catchtap="add"></image>
+              </view>
+            </view>
+        </view>
+      </view>
+</view>
+</scroll-view>
+<popup id='popup'  class="{{Popup? 'Pophiding':''}}"  bind:hideModal="a"  innerText="{{fatherAge}}" Pop="{{Pop}}"></popup>
